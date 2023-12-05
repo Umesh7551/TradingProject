@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Upload File</title>
+</head>
+<body>
+
+<h2>Upload File</h2>
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div>{{ form.file.label }}
+        {{ form.file }}
+    </div>
+    <br/>
+    <div>{{ form.timeframe.label }}
+        {{ form.timeframe }}
+    </div> <br/>
+
+    <button type="submit">Upload</button>
+</form>
+
+</body>
+</html>
